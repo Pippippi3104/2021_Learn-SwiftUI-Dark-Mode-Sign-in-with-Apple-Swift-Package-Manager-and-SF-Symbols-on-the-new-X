@@ -9,19 +9,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: label
     @IBOutlet weak var middleLabel: UILabel!
+    // init value
+    var count: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    // button
+    // MARK: button
     @IBAction func buttonTapped(_ sender: Any) {
-        // background color
-        view.backgroundColor = .purple
+        // count
+        count += 1
+        if count >= 10 {
+            // background color
+            view.backgroundColor = .purple
+        }
         
         // Label
-        middleLabel.text = "I like to sing !"
+        middleLabel.text = String(count)
     }
 }
 
