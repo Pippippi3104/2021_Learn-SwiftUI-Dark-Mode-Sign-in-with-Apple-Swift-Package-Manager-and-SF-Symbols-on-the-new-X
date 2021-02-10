@@ -29,6 +29,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w8-x2-nFn">
                                 <rect key="frame" x="184" y="174" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enD-4k-yp9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip: $0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-d8-Z17">
                                 <rect key="frame" x="168" y="220" width="78" height="21"/>
@@ -52,6 +55,11 @@
                             <constraint firstItem="x17-8o-bZc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="rwX-9q-eJm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTotalTextfield" destination="x17-8o-bZc" id="GI3-TH-nng"/>
+                        <outlet property="tipLabel" destination="2e3-d8-Z17" id="MWs-rk-7Xb"/>
+                        <outlet property="tipPercentageTextfield" destination="eto-Le-1RK" id="8I5-eV-Z3M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
