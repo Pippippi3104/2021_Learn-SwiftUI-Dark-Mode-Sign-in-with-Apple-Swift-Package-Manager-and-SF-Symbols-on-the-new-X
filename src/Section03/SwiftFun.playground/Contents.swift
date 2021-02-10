@@ -29,3 +29,17 @@ var c = Float(6)
 Double(a) * b * Double(c)
 
 
+// String Interporlationngiojgijriogjpr
+
+let age: Int = 31
+let name: String = "Nick"
+
+print("Hi my name is \(name) and I am \(age) years old")
+
+
+// Booleans
+
+let isWeekend: Bool = true
+if isWeekend {
+    print("Enjoy your weekend !")
+}

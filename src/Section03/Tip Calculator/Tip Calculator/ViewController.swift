@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipPercentageTextfield: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     
+    // MARK: Load InitView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,8 +29,7 @@ class ViewController: UIViewController {
         let tipPercentage = Double(tipPercentageTextfield.text!)
         
         let tip = billTotal! * (tipPercentage! / 100)
-        print(tip)
+        tipLabel.text = "Tip: $\(Int(tip))"
     }
-    
 }
 
