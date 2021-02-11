@@ -4,3 +4,5 @@
   - finish section02
 - v0.3.0
   - finish section03
+- v0.4.0
+  - finish section04
