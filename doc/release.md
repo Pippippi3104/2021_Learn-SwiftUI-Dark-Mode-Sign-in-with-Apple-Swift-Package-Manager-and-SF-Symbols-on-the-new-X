@@ -8,3 +8,5 @@
   - finish section04
 - v0.5.0
   - finish section05
+- v0.6.0
+  - finish section06
