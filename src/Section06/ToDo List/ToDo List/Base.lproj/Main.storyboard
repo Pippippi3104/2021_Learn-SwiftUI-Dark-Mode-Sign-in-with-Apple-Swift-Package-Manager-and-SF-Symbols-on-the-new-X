@@ -39,15 +39,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="8y2-xm-KsT" kind="show" identifier="goToComplete" id="zsO-qF-7wV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nlh-Jf-xX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-190" y="-62"/>
         </scene>
-        <!--View Controller-->
+        <!--Create To Do View Controller-->
         <scene sceneID="9yU-fl-WPa">
             <objects>
-                <viewController id="snc-mL-fEG" sceneMemberID="viewController">
+                <viewController id="snc-mL-fEG" customClass="CreateToDoViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="URD-kt-iv6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +85,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="snc-mL-fEG" eventType="touchUpInside" id="5VR-br-CDG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9j9-Fp-Tet"/>
@@ -100,10 +106,57 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jdf-WD-IFL"/>
+                    <connections>
+                        <outlet property="importantSwitch" destination="0Ac-6K-keN" id="TR4-vd-Alv"/>
+                        <outlet property="nameTextField" destination="Ytn-mZ-MQT" id="Msh-h0-JKT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6a-qA-W4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="521.73913043478262" y="-62.276785714285708"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="lOG-cd-R7H">
+            <objects>
+                <viewController id="8y2-xm-KsT" customClass="CompleteViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="syI-4K-JG5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA1-i0-raH">
+                                <rect key="frame" x="10" y="118" width="394" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idD-bE-Dsh">
+                                <rect key="frame" x="136" y="191" width="142" height="53"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="8y2-xm-KsT" eventType="touchUpInside" id="xg2-RW-WAn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NHl-OO-FFg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="idD-bE-Dsh" firstAttribute="centerX" secondItem="syI-4K-JG5" secondAttribute="centerX" id="05u-jn-jD7"/>
+                            <constraint firstItem="NHl-OO-FFg" firstAttribute="trailing" secondItem="tA1-i0-raH" secondAttribute="trailing" constant="10" id="1En-gx-8ju"/>
+                            <constraint firstItem="idD-bE-Dsh" firstAttribute="top" secondItem="tA1-i0-raH" secondAttribute="bottom" constant="32" id="6vX-XG-CuS"/>
+                            <constraint firstItem="tA1-i0-raH" firstAttribute="top" secondItem="NHl-OO-FFg" secondAttribute="top" constant="30" id="bQr-R5-Iua"/>
+                            <constraint firstItem="tA1-i0-raH" firstAttribute="centerX" secondItem="syI-4K-JG5" secondAttribute="centerX" id="bc5-7K-L7E"/>
+                            <constraint firstItem="tA1-i0-raH" firstAttribute="leading" secondItem="NHl-OO-FFg" secondAttribute="leading" constant="10" id="lwm-Cm-jwz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mmC-sm-C6h"/>
+                    <connections>
+                        <outlet property="toDoLabel" destination="tA1-i0-raH" id="GQb-Xb-XpH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fl4-ql-A4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521.73913043478262" y="618.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qmN-yk-RXH">
