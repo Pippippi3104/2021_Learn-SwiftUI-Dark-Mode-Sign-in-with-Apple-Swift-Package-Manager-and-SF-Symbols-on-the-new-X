@@ -31,4 +31,19 @@ class CodeTermTableViewController: UITableViewController {
 
         return cell
     }
+    
+    // MARK: Did selected row
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTerm: String = terms[indexPath.row]
+        performSegue(withIdentifier: "goToDefinition", sender: selectedTerm)
+    }
+    
+    //MARK: Prepare CodeViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let codeVC = segue.destination as! CodeViewController
+        let selectedTerm = sender as! String
+        
+        // term = CodeViewController's term
+        codeVC.term = selectedTerm
+    }
 }

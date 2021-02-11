@@ -26,3 +26,12 @@ favCandy.remove(at: 4)
 // Make an array of your favorite numbers and then remove one
 var favNumbers = [3, 8, 1, 14, 29]
 favNumbers.remove(at: 2)
+
+
+// Loops
+for x in 1...10 {
+    print(x)
+}
+for candy in favCandy {
+    print(candy)
+}
