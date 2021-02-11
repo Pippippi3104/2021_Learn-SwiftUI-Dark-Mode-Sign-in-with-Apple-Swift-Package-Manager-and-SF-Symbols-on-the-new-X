@@ -11,4 +11,5 @@ import Foundation
 class Term {
     var name: String = ""
     var definition: String = ""
+    var isType: Bool = false
 }

@@ -9,10 +9,30 @@ import UIKit
 
 class CodeTermTableViewController: UITableViewController {
     
-    var terms: [String] = ["Boolean", "Int", "Double", "String", "Array"]
+    // Term class Array
+    var terms: [Term] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Term definition
+        let term1 = Term()
+        term1.name = "Boolean"
+        term1.definition = "A true or false situation."
+        term1.isType = true
+        terms.append(term1)
+        
+        let term2 = Term()
+        term2.name = "Double"
+        term2.definition = "A number with decimals."
+        term2.isType = true
+        terms.append(term2)
+        
+        let term3 = Term()
+        term3.name = "If Statement"
+        term3.definition = "Code that allows us to go one way or another."
+        term3.isType = false
+        terms.append(term3)
     }
 
     // MARK: How many rows ?
@@ -27,23 +47,28 @@ class CodeTermTableViewController: UITableViewController {
 
         // Configure the cell...
         print(indexPath.row)
-        cell.textLabel?.text = terms[indexPath.row]
+        if terms[indexPath.row].isType {
+            cell.textLabel?.text = terms[indexPath.row].name + "- Type"
+        } else {
+            cell.textLabel?.text = terms[indexPath.row].name
+        }
 
         return cell
     }
     
     // MARK: Did selected row
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedTerm: String = terms[indexPath.row]
+        let selectedTerm: Term = terms[indexPath.row]
         performSegue(withIdentifier: "goToDefinition", sender: selectedTerm)
     }
     
     //MARK: Prepare CodeViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let codeVC = segue.destination as! CodeViewController
-        let selectedTerm = sender as! String
-        
-        // term = CodeViewController's term
-        codeVC.term = selectedTerm
+        if let codeVC = segue.destination as? CodeViewController {
+            if let selectedTerm = sender as? Term {
+                // term = CodeViewController's term
+                codeVC.term = selectedTerm
+            }
+        }
     }
 }

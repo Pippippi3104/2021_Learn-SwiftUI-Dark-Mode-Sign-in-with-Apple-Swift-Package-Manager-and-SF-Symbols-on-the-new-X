@@ -85,3 +85,7 @@ class Dog3: Animal {
 }
 var dog4 = Dog3()
 dog4.speak()
+
+
+// Optional
+var age: Int? = nil
