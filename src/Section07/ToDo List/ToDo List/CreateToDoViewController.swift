@@ -21,17 +21,20 @@ class CreateToDoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    // MARK: Buttom Actions
+    // MARK: Buttom Actions (connecting Coredata)
     @IBAction func addTapped(_ sender: Any) {
-        let newToDo = ToDo()
-        if let name = nameTextField.text {
-            newToDo.name = name
-            newToDo.important = importantSwitch.isOn
-            
-            // add new item to ToDo list at todoTableVC
-            toDoTableVC?.toDos.append(newToDo)
-            toDoTableVC?.tableView.reloadData()
-            navigationController?.popViewController(animated: true)
+        // connecting Coredata
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            // using Entity in Coredata
+            let newToDo = ToDoItem(context: context)
+            if let name = nameTextField.text {
+                newToDo.name = name
+                newToDo.important = importantSwitch.isOn
+                
+                // save new item to Coredata
+                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                navigationController?.popViewController(animated: true)
+            }
         }
     }
 }

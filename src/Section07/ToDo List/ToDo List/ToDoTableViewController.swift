@@ -10,21 +10,22 @@ import UIKit
 class ToDoTableViewController: UITableViewController {
     
     // init
-    var toDos: [ToDo] = []
+    var toDos: [ToDoItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // init
-        let toDo1 = ToDo()
-        toDo1.name = "Buy Milk"
-        toDo1.important = true
-        
-        let toDo2 = ToDo()
-        toDo2.name = "Walk the Dog"
-        toDo2.important = false
-        
-        toDos = [toDo1, toDo2]
+    }
+    
+    // update ToDo List
+    override func viewWillAppear(_ animated: Bool) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let coreDataToDoItems = try? context.fetch(ToDoItem.fetchRequest()) as? [ToDoItem] {
+                toDos = coreDataToDoItems
+                
+                // reload view
+                tableView.reloadData()
+            }
+        }
     }
     
     // MARK: - Table view data source
@@ -38,9 +39,11 @@ class ToDoTableViewController: UITableViewController {
         let cell = UITableViewCell()
         
         // Configure the cell...
-        let toDo = toDos[indexPath.row]
+        let toDo: ToDoItem = toDos[indexPath.row]
         if toDo.important {
-            cell.textLabel?.text = "!" + toDo.name
+            if let name: String = toDo.name {
+                cell.textLabel?.text = "!" + name
+            }
         } else {
             cell.textLabel?.text = toDo.name
         }
@@ -49,7 +52,7 @@ class ToDoTableViewController: UITableViewController {
     
     // MARK: selected actions
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedToDo: ToDo = toDos[indexPath.row]
+        let selectedToDo: ToDoItem = toDos[indexPath.row]
         performSegue(withIdentifier: "goToComplete", sender: selectedToDo)
     }
     
