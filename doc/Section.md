@@ -6,3 +6,4 @@
 - Section05: Object Oriented Programming with Swift
 - Section06: ToDo List App
 - Section07: Saving Data with CoreData
+- Section08: Camera and Images - Progress Update App
