@@ -36,13 +36,13 @@ class BitcoinViewController: UIViewController {
                             // async actions
                             DispatchQueue.main.async {
                                 if let usdPrice = json["USD"] {
-                                    self.usdLabel.text = "$\(usdPrice)"
+                                    self.usdLabel.text = self.getStringFor(price: usdPrice, currencyCode: "USD")
                                 }
                                 if let eurPrice = json["EUR"] {
-                                    self.eurLabel.text = "$\(eurPrice)"
+                                    self.eurLabel.text = self.getStringFor(price: eurPrice, currencyCode: "EUR")
                                 }
                                 if let jpyPrice = json["JPY"] {
-                                    self.jpyLabel.text = "$\(jpyPrice)"
+                                    self.jpyLabel.text = self.getStringFor(price: jpyPrice, currencyCode: "JPY")
                                 }
                             }
                         }
@@ -52,6 +52,17 @@ class BitcoinViewController: UIViewController {
                 }
             }.resume()
         }
+    }
+    
+    // MARK: fomatter
+    func getStringFor(price: Double, currencyCode: String) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = currencyCode
+        if let priceString = formatter.string(from: NSNumber(value: price)) {
+            return priceString
+        }
+        return "Error"
     }
     
     // MARK: button actions
