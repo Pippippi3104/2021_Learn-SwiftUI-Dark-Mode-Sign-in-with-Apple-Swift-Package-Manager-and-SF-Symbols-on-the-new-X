@@ -50,5 +50,15 @@ class CreateProgressUpdateViewController: UIViewController, UIImagePickerControl
         present(pickerController, animated: true, completion: nil)
     }
     @IBAction func addTapped(_ sender: Any) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            // create new item
+            let progressUpdateToSaved = ProgressUpdate(context: context)
+            progressUpdateToSaved.title = titleTextField.text
+            progressUpdateToSaved.image = photoImageView.image?.jpegData(compressionQuality: 1.0)
+            
+            // save item
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        }
+        navigationController?.popViewController(animated: true)
     }
 }
