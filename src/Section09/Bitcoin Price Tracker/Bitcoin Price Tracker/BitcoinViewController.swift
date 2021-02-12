@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BitcoinViewController.swift
 //  Bitcoin Price Tracker
 //
 //  Created by Satoshi Shimamura Second on 2021/02/12.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BitcoinViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
