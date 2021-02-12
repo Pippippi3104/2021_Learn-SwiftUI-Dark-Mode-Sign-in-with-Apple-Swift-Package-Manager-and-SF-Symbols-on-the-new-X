@@ -12,7 +12,6 @@ class CreateToDoViewController: UIViewController {
     // MARK: View Init
     @IBOutlet weak var importantSwitch: UISwitch!
     @IBOutlet weak var nameTextField: UITextField!
-    var toDoTableVC: ToDoTableViewController? = nil
     
     // MARK: loading View
     override func viewDidLoad() {

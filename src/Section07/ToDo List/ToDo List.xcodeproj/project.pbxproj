@@ -13,7 +13,6 @@
 		356AE5F925D52933004AD047 /* ToDo_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 356AE5F725D52933004AD047 /* ToDo_List.xcdatamodeld */; };
 		356AE5FB25D52936004AD047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356AE5FA25D52936004AD047 /* Assets.xcassets */; };
 		356AE5FE25D52936004AD047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356AE5FC25D52936004AD047 /* LaunchScreen.storyboard */; };
-		356AE60825D529EC004AD047 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AE60725D529EC004AD047 /* ToDo.swift */; };
 		356AE60B25D52A57004AD047 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AE60A25D52A57004AD047 /* ToDoTableViewController.swift */; };
 		356AE61125D58CBA004AD047 /* CreateToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AE61025D58CBA004AD047 /* CreateToDoViewController.swift */; };
 		356AE61925D59110004AD047 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AE61825D59110004AD047 /* CompleteViewController.swift */; };
@@ -28,7 +27,6 @@
 		356AE5FA25D52936004AD047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		356AE5FD25D52936004AD047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		356AE5FF25D52936004AD047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		356AE60725D529EC004AD047 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		356AE60A25D52A57004AD047 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		356AE61025D58CBA004AD047 /* CreateToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoViewController.swift; sourceTree = "<group>"; };
 		356AE61825D59110004AD047 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			children = (
 				356AE5EE25D52933004AD047 /* AppDelegate.swift */,
 				356AE5F025D52933004AD047 /* SceneDelegate.swift */,
-				356AE60725D529EC004AD047 /* ToDo.swift */,
 				356AE60A25D52A57004AD047 /* ToDoTableViewController.swift */,
 				356AE61025D58CBA004AD047 /* CreateToDoViewController.swift */,
 				356AE61825D59110004AD047 /* CompleteViewController.swift */,
@@ -154,7 +151,6 @@
 				356AE61125D58CBA004AD047 /* CreateToDoViewController.swift in Sources */,
 				356AE5F925D52933004AD047 /* ToDo_List.xcdatamodeld in Sources */,
 				356AE61925D59110004AD047 /* CompleteViewController.swift in Sources */,
-				356AE60825D529EC004AD047 /* ToDo.swift in Sources */,
 				356AE60B25D52A57004AD047 /* ToDoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
