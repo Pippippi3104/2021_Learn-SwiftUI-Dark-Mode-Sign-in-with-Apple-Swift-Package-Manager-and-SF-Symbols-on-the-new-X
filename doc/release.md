@@ -14,3 +14,5 @@
   - finish section07
 - v0.8.0
   - finish section08
+- v0.9.0
+  - finish section09
