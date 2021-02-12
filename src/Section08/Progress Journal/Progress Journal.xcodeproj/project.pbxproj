@@ -13,6 +13,8 @@
 		356AE66725D63CFA004AD047 /* Progress_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 356AE66525D63CFA004AD047 /* Progress_Journal.xcdatamodeld */; };
 		356AE66925D63CFD004AD047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356AE66825D63CFD004AD047 /* Assets.xcassets */; };
 		356AE66C25D63CFD004AD047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356AE66A25D63CFD004AD047 /* LaunchScreen.storyboard */; };
+		356AE67C25D64410004AD047 /* ProgressUpdateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AE67B25D64410004AD047 /* ProgressUpdateTableViewController.swift */; };
+		356AE67F25D6443F004AD047 /* CreateProgressUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AE67E25D6443F004AD047 /* CreateProgressUpdateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		356AE66825D63CFD004AD047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		356AE66B25D63CFD004AD047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		356AE66D25D63CFD004AD047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356AE67B25D64410004AD047 /* ProgressUpdateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUpdateTableViewController.swift; sourceTree = "<group>"; };
+		356AE67E25D6443F004AD047 /* CreateProgressUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProgressUpdateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				356AE65C25D63CFA004AD047 /* AppDelegate.swift */,
 				356AE65E25D63CFA004AD047 /* SceneDelegate.swift */,
+				356AE67B25D64410004AD047 /* ProgressUpdateTableViewController.swift */,
+				356AE67E25D6443F004AD047 /* CreateProgressUpdateViewController.swift */,
 				356AE66225D63CFA004AD047 /* Main.storyboard */,
 				356AE66825D63CFD004AD047 /* Assets.xcassets */,
 				356AE66A25D63CFD004AD047 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				356AE66725D63CFA004AD047 /* Progress_Journal.xcdatamodeld in Sources */,
+				356AE67C25D64410004AD047 /* ProgressUpdateTableViewController.swift in Sources */,
+				356AE67F25D6443F004AD047 /* CreateProgressUpdateViewController.swift in Sources */,
 				356AE65D25D63CFA004AD047 /* AppDelegate.swift in Sources */,
 				356AE65F25D63CFA004AD047 /* SceneDelegate.swift in Sources */,
 			);
