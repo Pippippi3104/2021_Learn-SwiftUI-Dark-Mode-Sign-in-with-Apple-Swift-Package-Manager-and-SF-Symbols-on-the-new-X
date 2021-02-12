@@ -64,4 +64,19 @@ class ProgressUpdateTableViewController: UITableViewController {
             }
         }
     }
+    
+    // MARK: selected action
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let progressUpdate = update[indexPath.row]
+        performSegue(withIdentifier: "showUpdate", sender: progressUpdate)
+    }
+    
+    // MARK: prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewProgressUpdateVC = segue.destination as? ViewProgressUpdateViewController {
+            if let progressUpdate = sender as? ProgressUpdate {
+                viewProgressUpdateVC.progressUpdate = progressUpdate
+            }
+        }
+    }
 }
