@@ -5,3 +5,4 @@
 - Section04: TableViews - Code Dictionary App
 - Section05: Object Oriented Programming with Swift
 - Section06: ToDo List App
+- Section07: Saving Data with CoreData
