@@ -8,7 +8,7 @@
 import UIKit
 
 class BitcoinViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,7 +19,20 @@ class BitcoinViewController: UIViewController {
             URLSession.shared.dataTask(with: url) {
                 (data: Data?, response: URLResponse?, error: Error?) in
                 if error == nil {
-                    print("It's working!")
+                    // convert into Json
+                    if data != nil {
+                        if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Double] {
+                            if let usdPrice = json["USD"] {
+                                print(usdPrice)
+                            }
+                            if let eurPrice = json["EUR"] {
+                                print(eurPrice)
+                            }
+                            if let jpyPrice = json["JPY"] {
+                                print(jpyPrice)
+                            }
+                        }
+                    }
                 } else {
                     print("We have error.")
                 }
