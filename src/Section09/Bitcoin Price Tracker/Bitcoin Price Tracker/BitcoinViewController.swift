@@ -18,6 +18,17 @@ class BitcoinViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // MARK: use Default
+        if let usd = UserDefaults.standard.string(forKey: "USD") {
+            usdLabel.text = usd
+        }
+        if let eur = UserDefaults.standard.string(forKey: "EUR") {
+            eurLabel.text = eur
+        }
+        if let jpy = UserDefaults.standard.string(forKey: "JPY") {
+            jpyLabel.text = jpy
+        }
+        
         // MARK: use API
         // Crypto Compare(https://min-api.cryptocompare.com/documentation)
         getPrice()
@@ -37,12 +48,15 @@ class BitcoinViewController: UIViewController {
                             DispatchQueue.main.async {
                                 if let usdPrice = json["USD"] {
                                     self.usdLabel.text = self.getStringFor(price: usdPrice, currencyCode: "USD")
+                                    UserDefaults.standard.set(self.getStringFor(price: usdPrice, currencyCode: "USD") + "~", forKey: "USD")
                                 }
                                 if let eurPrice = json["EUR"] {
                                     self.eurLabel.text = self.getStringFor(price: eurPrice, currencyCode: "EUR")
+                                    UserDefaults.standard.set(self.getStringFor(price: eurPrice, currencyCode: "EUR") + "~", forKey: "EUR")
                                 }
                                 if let jpyPrice = json["JPY"] {
                                     self.jpyLabel.text = self.getStringFor(price: jpyPrice, currencyCode: "JPY")
+                                    UserDefaults.standard.set(self.getStringFor(price: jpyPrice, currencyCode: "JPY") + "~", forKey: "JPY")
                                 }
                             }
                         }
