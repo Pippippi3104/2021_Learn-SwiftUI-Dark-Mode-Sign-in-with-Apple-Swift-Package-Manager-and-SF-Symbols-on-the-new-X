@@ -58,15 +58,10 @@ class ToDoTableViewController: UITableViewController {
     
     // MARK: prepare for add component
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // if destination is CreateVC
-        if let createVC = segue.destination as? CreateToDoViewController {
-            createVC.toDoTableVC = self
-        }
         // if destination is CompleteVC
         if let completeVC = segue.destination as? CompleteViewController {
-            if let toDo = sender as? ToDo {
+            if let toDo: ToDoItem = sender as? ToDoItem {
                 completeVC.toDo = toDo
-                completeVC.toDoTableVC = self
             }
         }
     }
