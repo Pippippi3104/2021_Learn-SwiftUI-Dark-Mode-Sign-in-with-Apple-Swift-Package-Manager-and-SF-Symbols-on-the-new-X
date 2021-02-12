@@ -10,3 +10,5 @@
   - finish section05
 - v0.6.0
   - finish section06
+- v0.7.0
+  - finish section07
