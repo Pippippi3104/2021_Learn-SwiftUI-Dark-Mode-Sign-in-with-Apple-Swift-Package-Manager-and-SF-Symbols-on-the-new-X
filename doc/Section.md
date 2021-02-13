@@ -11,3 +11,5 @@
 - Section10: Uploading your App to the App Store
 - Section11: Get more App Downloads with ASO
 - Section12: SwiftUI
+- Section13: iOS Special Features
+- Section14: Bonus Lecture
