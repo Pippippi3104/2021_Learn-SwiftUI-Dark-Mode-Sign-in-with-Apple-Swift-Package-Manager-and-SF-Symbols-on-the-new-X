@@ -9,19 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .foregroundColor(.red)
-                .fontWeight(.heavy)
-            Spacer()
-            Text("I love swiftUI")
-            Spacer()
-            Text("I like eggs")
-                .foregroundColor(.white)
-                .background(Color.green)
-            Circle().foregroundColor(.orange)
-            Rectangle()
-            Image(systemName: "trash").resizable()
+        NavigationView {
+            VStack {
+                Text("Hello, world!")
+                    .foregroundColor(.red)
+                    .fontWeight(.heavy)
+                Spacer()
+                Text("I love swiftUI")
+                Spacer()
+                Text("I like eggs")
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                Circle().foregroundColor(.orange)
+                Rectangle()
+                Image(systemName: "trash").resizable()
+                NavigationLink(
+                    destination: NickDetailView(),
+                    label: {
+                        Text("Go to Deatail")
+                    })
+            }.navigationBarTitle("Hello World")
         }
         .padding()
     }

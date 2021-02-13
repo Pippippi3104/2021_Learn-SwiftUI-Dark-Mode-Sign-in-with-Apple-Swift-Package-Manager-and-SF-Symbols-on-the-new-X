@@ -13,6 +13,7 @@
 		35811D3325D76A2D00A7BBC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35811D3225D76A2D00A7BBC9 /* Assets.xcassets */; };
 		35811D3625D76A2D00A7BBC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35811D3525D76A2D00A7BBC9 /* Preview Assets.xcassets */; };
 		35811D3925D76A2D00A7BBC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35811D3725D76A2D00A7BBC9 /* LaunchScreen.storyboard */; };
+		35811D4225D76ECB00A7BBC9 /* NickDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35811D4125D76ECB00A7BBC9 /* NickDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		35811D3525D76A2D00A7BBC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35811D3825D76A2D00A7BBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35811D3A25D76A2D00A7BBC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35811D4125D76ECB00A7BBC9 /* NickDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				35811D2C25D76A2A00A7BBC9 /* AppDelegate.swift */,
 				35811D2E25D76A2A00A7BBC9 /* SceneDelegate.swift */,
 				35811D3025D76A2A00A7BBC9 /* ContentView.swift */,
+				35811D4125D76ECB00A7BBC9 /* NickDetailView.swift */,
 				35811D3225D76A2D00A7BBC9 /* Assets.xcassets */,
 				35811D3725D76A2D00A7BBC9 /* LaunchScreen.storyboard */,
 				35811D3A25D76A2D00A7BBC9 /* Info.plist */,
@@ -147,6 +150,7 @@
 			files = (
 				35811D2D25D76A2A00A7BBC9 /* AppDelegate.swift in Sources */,
 				35811D2F25D76A2A00A7BBC9 /* SceneDelegate.swift in Sources */,
+				35811D4225D76ECB00A7BBC9 /* NickDetailView.swift in Sources */,
 				35811D3125D76A2A00A7BBC9 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
