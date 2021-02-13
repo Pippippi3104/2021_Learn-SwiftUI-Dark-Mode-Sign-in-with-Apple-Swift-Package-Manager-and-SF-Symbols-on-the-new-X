@@ -16,3 +16,5 @@
   - finish section08
 - v0.9.0
   - finish section09
+- v0.12.0
+  - finish section12
